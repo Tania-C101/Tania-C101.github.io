@@ -1,0 +1,394 @@
+body {
+  width: 100%;
+  height: auto;
+  font-family: "Poppins", sans-serif;
+}
+
+/* Navigation bar */
+.nav {
+  background-color: #ffffff;
+}
+
+/* Navigation tabs */
+.nav-pills .nav-link {
+  margin: 5px;
+  border-radius: 10px;
+}
+
+/* Navigation tab content */
+.nav-item {
+  font-size: 20px;
+  color: #000000;
+  text-align: center;
+  text-decoration: none;
+}
+
+/* Background image panel */
+.panel {
+  max-width: 100%;
+  max-height: auto;
+  background-image: url("images/Tania.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+/* Typing window */
+.typing-window {
+  width: 150px;
+  margin: 350px 0px 0px 650px;
+}
+
+/* Base styles for the text */
+.typing {
+  font-family: monospace;
+  font-size: 24px;
+  color: #ffffff;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+#line1 {
+  animation: typing1 3s steps(10) forwards, blink 0.75s step-end infinite;
+}
+
+#line2 {
+  opacity: 0;
+  animation: typing2 3s steps(15) 3s forwards, blink 0.75s step-end infinite;
+}
+
+/* Typing effect */
+@keyframes typing1 {
+  from {
+    width: 0;
+  }
+  to {
+    width: 10ch;
+  }
+}
+
+@keyframes typing2 {
+  from {
+    width: 0;
+    opacity: 1;
+  }
+  to {
+    width: 15ch;
+    opacity: 1;
+  }
+}
+
+/* Cursor blink effect */
+@keyframes blink {
+  from,
+  to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: black;
+  }
+}
+
+/* About Me Page */
+
+/* Paragraph style */
+p {
+  font-family: "Poppins", sans-serif;
+  font-size: 14.5px;
+  line-height: 2;
+}
+
+/* Dynamic application of background color */
+.bc-black {
+  background-color: #ffffff;
+}
+
+/* Main container */
+.container {
+  display: block;
+  max-width: 100%;
+  height: 90vh;
+  padding: 100px 50px 50px 50px;
+  background-image: linear-gradient(#a600fa, #2841e5);
+}
+
+/* Left container */
+.left {
+  float: left;
+  width: 30%;
+  padding: 30px;
+  border-radius: 20px;
+  background-color: #ffffff;
+}
+
+/* Right container */
+.right {
+  float: right;
+  width: 65%;
+}
+
+.right,
+.sub-container1,
+.left3,
+.right3 {
+  padding: 50px;
+  border-radius: 20px;
+  background-color: #ffffff;
+}
+
+/* Profile section icon */
+.profile-sec-icon {
+  display: flex;
+}
+
+/* Main container 2 */
+.container1,
+.container2,
+.container3,
+.container4 {
+  display: block;
+  max-width: 100%;
+  padding: 70px 50px 50px 50px;
+}
+
+/* Category table */
+.category-table {
+  width: 100%;
+  text-align: center;
+}
+
+.left-main {
+  float: left;
+  width: 60%;
+  padding: 50px;
+  margin-right: 100px;
+  border-radius: 20px;
+  background-color: #ededed;
+}
+
+/* Sub containers for skills */
+.left1 {
+  float: left;
+  width: 45%;
+  margin-right: 50px;
+}
+
+.left11 {
+  float: left;
+  width: 45%;
+}
+
+.right1 {
+  float: left;
+  width: 30%;
+  padding: 25px;
+  border-radius: 20px;
+  background-color: #ededed;
+}
+
+/* Progress bar attributes */
+.bar-length {
+  height: 25px;
+  flex-grow: 1;
+}
+
+/* Progress bar background color*/
+.progress {
+  background-color: #888888;
+}
+
+/* List spacing */
+.list-spacing {
+  line-height: 40px;
+}
+
+/* Arranges text and bar in a single row side by side */
+.skill-item {
+  display: flex;
+  margin-bottom: 10px;
+}
+
+.skill-item span {
+  width: 150px;
+  flex-shrink: 0; /* Prevents the text from shrinking */
+  font-weight: bold;
+}
+
+/* Overlay images */
+.overlay-image {
+  position: absolute;
+  opacity: 0.8; /* Adjust transparency if needed */
+}
+
+.message {
+  opacity: 0;
+  transform: rotate(25deg);
+  animation: anim1 2s cubic-bezier(0.25, 0.1, 0.25, 1) 1s 1 forwards;
+}
+
+@keyframes anim1 {
+  from {
+    top: 490px;
+    left: 0px;
+  }
+  to {
+    top: 490px;
+    left: 950px;
+    opacity: 1;
+  }
+}
+
+.arrow {
+  opacity: 0;
+  transform: rotate(35deg);
+  animation: anim2 2s cubic-bezier(0.25, 0.1, 0.25, 1) 3s 1 forwards;
+}
+
+@keyframes anim2 {
+  from {
+    top: 600px;
+    left: 150px;
+  }
+  to {
+    top: 655px;
+    left: 150px;
+    opacity: 1;
+  }
+}
+
+.alert {
+  width: 400px;
+}
+
+/* Main container for Academic */
+.container2 {
+  padding-top: 70px;
+  background-image: linear-gradient(#4200dc, #a600fe);
+}
+
+/* Sub container margin setting */
+.sub-container1 {
+  margin-left: 100px;
+  margin-right: 100px;
+}
+
+/* Overlay images */
+
+.grad-cap {
+  top: 1480px;
+  left: 50px;
+  transform: rotate(-35deg);
+}
+
+.award {
+  top: 1690px;
+  left: 1250px;
+}
+
+.code {
+  top: 2900px;
+  left: 270px;
+}
+
+/* Main container */
+.container3 {
+  background-image: linear-gradient(#4200dc, #a600fe);
+}
+
+/* Sub containers of Main container 3 */
+.left3 {
+  float: left;
+  width: 49%;
+  background-color: #d9d2ec;
+}
+
+.right3 {
+  display: block;
+  float: right;
+  width: 49%;
+  height: 100%;
+  background-color: #4200dc;
+  color: white;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  background-color: #dbdbdb;
+}
+
+.r-top,
+.r-bottom {
+  height: 45%;
+}
+
+/* Footer */
+footer {
+  height: 100px;
+  margin: 0px;
+}
+
+.footerContainer {
+  width: 100%;
+  height: 35vh;
+  display: flex;
+  padding: 50px 100px 30px 100px;
+  background-color: #000000;
+  color: #dfdfdf;
+  font-size: 14px;
+}
+
+.sec1 {
+  width: 50%;
+  float: left;
+  padding-top: 0px;
+}
+
+.sec2 {
+  width: 25%;
+  float: left;
+}
+
+.sec3 {
+  width: 25%;
+  float: left;
+}
+
+.footerLink {
+  text-decoration: none;
+  color: #c3c3c3;
+  line-height: 35px;
+}
+
+/* Project container / Certificate containers*/
+.container4 {
+  width: 100%;
+  height: 95vh;
+  background-color: #ffffff;
+}
+
+.left4 {
+  width: 35%;
+  float: left;
+}
+
+.right4 {
+  width: 55%;
+  float: right;
+}
+
+.left5 {
+  width: 47%;
+  float: left;
+}
+
+.right5 {
+  width: 47%;
+  float: right;
+}
+
+.b-color {
+  background-image: linear-gradient(#ffffff, #ffffff);
+}
+
+.row-height {
+  height: 50px;
+}
