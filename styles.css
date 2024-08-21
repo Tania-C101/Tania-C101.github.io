@@ -446,6 +446,7 @@ p {
 .container3 {
   height: 95vh;
   font-size: 12px;
+  background-image: linear-gradient(#4200dc, #a600fe);
 }
 
 .left4 {
