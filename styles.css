@@ -1,5 +1,5 @@
 body {
-  width: 100%;
+  max-width: 100%;
   height: auto;
   font-family: "Poppins", sans-serif;
 }
@@ -17,7 +17,7 @@ body {
 
 /* Navigation tab content */
 .nav-item {
-  font-size: 20px;
+  font-size: 18px;
   color: #000000;
   text-align: center;
   text-decoration: none;
@@ -34,39 +34,55 @@ body {
 
 /* Typing window */
 .typing-window {
-  width: 150px;
-  margin: 350px 0px 0px 650px;
+  margin: 300px 0px 0px 590px;
 }
 
 /* Base styles for the text */
 .typing {
   font-family: monospace;
-  font-size: 24px;
+  font-size: 21px;
   color: #ffffff;
   white-space: nowrap;
   overflow: hidden;
 }
 
 #line1 {
-  animation: typing1 3s steps(10) forwards, blink 0.75s step-end infinite;
+  animation: typing1 2s steps(14) forwards, blink 0.75s step-end infinite;
 }
 
 #line2 {
   opacity: 0;
-  animation: typing2 3s steps(15) 3s forwards, blink 0.75s step-end infinite;
+  animation: typing2 2s steps(10) 2s forwards, blink 0.75s step-end infinite;
+}
+
+#line3 {
+  opacity: 0;
+  animation: typing3 2s steps(15) 4s forwards, blink 0.75s step-end infinite;
 }
 
 /* Typing effect */
+
 @keyframes typing1 {
   from {
     width: 0;
   }
   to {
-    width: 10ch;
+    width: 14ch;
   }
 }
 
 @keyframes typing2 {
+  from {
+    width: 0;
+    opacity: 1;
+  }
+  to {
+    width: 10ch;
+    opacity: 1;
+  }
+}
+
+@keyframes typing3 {
   from {
     width: 0;
     opacity: 1;
@@ -88,12 +104,11 @@ body {
   }
 }
 
-/* About Me Page */
-
+/* Profile Page */
 /* Paragraph style */
 p {
   font-family: "Poppins", sans-serif;
-  font-size: 14.5px;
+  font-size: 12.5px;
   line-height: 2;
 }
 
@@ -102,115 +117,73 @@ p {
   background-color: #ffffff;
 }
 
-/* Main container */
-.container {
-  display: block;
-  max-width: 100%;
-  height: 90vh;
-  padding: 100px 50px 50px 50px;
-  background-image: linear-gradient(#a600fa, #2841e5);
-}
-
-/* Left container */
-.left {
-  float: left;
-  width: 30%;
-  padding: 30px;
-  border-radius: 20px;
-  background-color: #ffffff;
-}
-
-/* Right container */
-.right {
-  float: right;
-  width: 65%;
-}
-
-.right,
-.sub-container1,
-.left3,
-.right3 {
-  padding: 50px;
-  border-radius: 20px;
-  background-color: #ffffff;
-}
-
-/* Profile section icon */
-.profile-sec-icon {
-  display: flex;
-}
-
-/* Main container 2 */
+/* All display block containers */
+.container,
 .container1,
 .container2,
 .container3,
 .container4 {
   display: block;
   max-width: 100%;
-  padding: 70px 50px 50px 50px;
-}
-
-/* Category table */
-.category-table {
-  width: 100%;
-  text-align: center;
-}
-
-.left-main {
-  float: left;
-  width: 60%;
   padding: 50px;
-  margin-right: 100px;
+}
+
+/* All left floats */
+.left,
+.left1,
+.left2,
+.left3,
+.left4,
+.left5,
+.sec1,
+.sec2,
+.sec3 {
+  float: left;
+}
+
+/* All right floats */
+.right,
+.right1,
+.right2,
+.right3,
+.right4,
+.rigth5 {
+  float: right;
+}
+
+/* All border-radius*/
+.left,
+.left1,
+.right,
+.right1,
+.left2,
+.right2 {
   border-radius: 20px;
-  background-color: #ededed;
 }
 
-/* Sub containers for skills */
-.left1 {
-  float: left;
-  width: 45%;
-  margin-right: 50px;
+/* Main container */
+.container {
+  height: 95vh;
+  padding: 80px 50px 50px 50px;
+  background-image: linear-gradient(#a600fa, #2841e5);
 }
 
-.left11 {
-  float: left;
-  width: 45%;
-}
-
-.right1 {
-  float: left;
+/* Left container */
+.left {
   width: 30%;
-  padding: 25px;
-  border-radius: 20px;
-  background-color: #ededed;
+  padding: 30px;
 }
 
-/* Progress bar attributes */
-.bar-length {
-  height: 25px;
-  flex-grow: 1;
+/* Right container */
+.right {
+  width: 65%;
+  padding: 50px;
+  background-color: #ffffff;
 }
 
-/* Progress bar background color*/
-.progress {
-  background-color: #888888;
-}
-
-/* List spacing */
-.list-spacing {
-  line-height: 40px;
-}
-
-/* Arranges text and bar in a single row side by side */
-.skill-item {
+/* Profile section icon */
+.profile-sec-icon {
   display: flex;
-  margin-bottom: 10px;
-}
-
-.skill-item span {
-  width: 150px;
-  flex-shrink: 0; /* Prevents the text from shrinking */
-  font-weight: bold;
 }
 
 /* Overlay images */
@@ -227,12 +200,12 @@ p {
 
 @keyframes anim1 {
   from {
-    top: 490px;
+    top: 420px;
     left: 0px;
   }
   to {
-    top: 490px;
-    left: 950px;
+    top: 420px;
+    left: 880px;
     opacity: 1;
   }
 }
@@ -245,18 +218,65 @@ p {
 
 @keyframes anim2 {
   from {
-    top: 600px;
-    left: 150px;
+    top: 580px;
+    left: 125px;
   }
   to {
-    top: 655px;
-    left: 150px;
+    top: 620px;
+    left: 125px;
     opacity: 1;
   }
 }
 
+/* Category table */
+.category-table {
+  width: 100%;
+  text-align: center;
+  margin-left: 60px;
+}
+
+/* Left skill sub-container */
+.left1 {
+  width: 65%;
+  padding: 50px;
+  background-color: #efefef;
+}
+
+.skill-table,
+.skill-row {
+  width: 100%;
+}
+
+.bar-col {
+  height: 70px;
+}
+
+/* Progress bar attributes */
+.bar-length {
+  height: 15px;
+}
+
+/* Progress bar background color*/
+.progress {
+  background-color: #bbcaf4;
+  width: 200px;
+}
+
+/* Right skill sub-container */
+.right1 {
+  width: 30%;
+  padding: 25px 0px 25px 50px;
+  background-color: #6f00ff;
+}
+
+/* List spacing */
+.list-spacing {
+  line-height: 40px;
+}
+
 .alert {
-  width: 400px;
+  width: 300px;
+  font-size: 14px;
 }
 
 /* Main container for Academic */
@@ -265,48 +285,60 @@ p {
   background-image: linear-gradient(#4200dc, #a600fe);
 }
 
-/* Sub container margin setting */
-.sub-container1 {
-  margin-left: 100px;
-  margin-right: 100px;
+.ac-alert {
+  width: 900px;
 }
 
 /* Overlay images */
-
 .grad-cap {
-  top: 1480px;
-  left: 50px;
+  top: 1700px;
+  left: 120px;
   transform: rotate(-35deg);
 }
 
-.award {
-  top: 1690px;
-  left: 1250px;
+.grad-girl {
+  top: 1680px;
+  left: 1150px;
 }
 
-.code {
-  top: 2900px;
-  left: 270px;
+/* GPA Table */
+.gpa-table {
+  width: 30%;
+  font-size: 12px;
+  text-align: center;
+}
+
+.gpa-table,
+.gpa-row {
+  border: 1px solid black;
+}
+
+.bg-black {
+  background-image: linear-gradient(black, black);
+}
+
+/* Sub containers for Seconary education and co-curricular */
+.right2 {
+  width: 60%;
+}
+
+.left2,
+.right2 {
+  padding: 50px;
+  background-color: #8c00ff;
+}
+
+.se-alert {
+  width: 400px;
+}
+
+.cc-alert {
+  width: 370px;
 }
 
 /* Main container */
 .container3 {
   background-image: linear-gradient(#4200dc, #a600fe);
-}
-
-/* Sub containers of Main container 3 */
-.left3 {
-  float: left;
-  width: 49%;
-  background-color: #d9d2ec;
-}
-
-.right3 {
-  display: block;
-  float: right;
-  width: 49%;
-  height: 100%;
-  background-color: #4200dc;
   color: white;
 }
 
@@ -327,9 +359,9 @@ footer {
 }
 
 .footerContainer {
+  display: flex;
   width: 100%;
   height: 35vh;
-  display: flex;
   padding: 50px 100px 30px 100px;
   background-color: #000000;
   color: #dfdfdf;
@@ -338,18 +370,15 @@ footer {
 
 .sec1 {
   width: 50%;
-  float: left;
-  padding-top: 0px;
+  margin-top: 0px;
 }
 
 .sec2 {
   width: 25%;
-  float: left;
 }
 
 .sec3 {
   width: 25%;
-  float: left;
 }
 
 .footerLink {
@@ -360,29 +389,24 @@ footer {
 
 /* Project container / Certificate containers*/
 .container4 {
-  width: 100%;
   height: 95vh;
   background-color: #ffffff;
 }
 
 .left4 {
   width: 35%;
-  float: left;
 }
 
 .right4 {
   width: 55%;
-  float: right;
 }
 
 .left5 {
   width: 47%;
-  float: left;
 }
 
 .right5 {
   width: 47%;
-  float: right;
 }
 
 .b-color {
