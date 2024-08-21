@@ -61,7 +61,6 @@ body {
 }
 
 /* Typing effect */
-
 @keyframes typing1 {
   from {
     width: 0;
@@ -135,6 +134,7 @@ p {
 .left3,
 .left4,
 .left5,
+.left6,
 .sec1,
 .sec2,
 .sec3 {
@@ -147,7 +147,8 @@ p {
 .right2,
 .right3,
 .right4,
-.rigth5 {
+.right5,
+.right6 {
   float: right;
 }
 
@@ -159,6 +160,68 @@ p {
 .left2,
 .right2 {
   border-radius: 20px;
+}
+
+/* Animation for left and right */
+@keyframes slideIn {
+  from {
+    transform: translateX(-50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.right,
+.left {
+  position: relative;
+}
+
+.left,
+.left1,
+.left2,
+.left3,
+.right,
+.right1,
+.right2,
+.right3 {
+  animation: slideIn 1s ease-in forwards;
+  opacity: 0;
+}
+
+/* Adding delays to synchronize the pairs */
+.left {
+  animation-delay: 0s;
+}
+
+.right {
+  animation-delay: 1s; /* 1 second after .left */
+}
+
+.left1 {
+  animation-delay: 3s;
+}
+
+.right1 {
+  animation-delay: 4s; /* 1 second after .left1 */
+}
+
+.left2 {
+  animation-delay: 6s;
+}
+
+.right2 {
+  animation-delay: 7s; /* 1 second after .left2 */
+}
+
+.left3 {
+  animation-delay: 9s;
+}
+
+.right3 {
+  animation-delay: 10s; /* 1 second after .left3 */
 }
 
 /* Main container */
@@ -210,22 +273,67 @@ p {
   }
 }
 
-.arrow {
+.arrow,
+.arrow1,
+.arrow2 {
   opacity: 0;
-  transform: rotate(35deg);
-  animation: anim2 2s cubic-bezier(0.25, 0.1, 0.25, 1) 3s 1 forwards;
+}
+
+.arrow {
+  transform: rotate(45deg);
+  animation: anim2 2s cubic-bezier(0.25, 0.1, 0.25, 1) 1s 1 forwards;
 }
 
 @keyframes anim2 {
   from {
-    top: 580px;
-    left: 125px;
+    top: 610px;
+    left: 200px;
   }
   to {
-    top: 620px;
-    left: 125px;
+    top: 630px;
+    left: 200px;
     opacity: 1;
   }
+}
+
+.arrow1 {
+  rotate: 90deg;
+  transform: scaleY(-1);
+  animation: anim3 2s cubic-bezier(0.25, 0.1, 0.25, 1) 5s 1 forwards;
+}
+
+@keyframes anim3 {
+  from {
+    top: 1250px;
+    left: 900px;
+  }
+  to {
+    top: 1350px;
+    left: 900px;
+    opacity: 1;
+  }
+}
+
+.arrow2 {
+  rotate: 90deg;
+  animation: anim4 2s cubic-bezier(0.25, 0.1, 0.25, 1) 5s 1 forwards;
+}
+
+@keyframes anim4 {
+  from {
+    top: 1950px;
+    left: 600px;
+  }
+  to {
+    top: 2000px;
+    left: 600px;
+    opacity: 1;
+  }
+}
+
+/* Main container for Skills */
+.container1 {
+  background-color: #ffffffed;
 }
 
 /* Category table */
@@ -287,6 +395,8 @@ p {
 
 .ac-alert {
   width: 900px;
+  color: #000000;
+  background-color: #ffffff;
 }
 
 /* Overlay images */
@@ -313,10 +423,6 @@ p {
   border: 1px solid black;
 }
 
-.bg-black {
-  background-image: linear-gradient(black, black);
-}
-
 /* Sub containers for Seconary education and co-curricular */
 .right2 {
   width: 60%;
@@ -325,7 +431,7 @@ p {
 .left2,
 .right2 {
   padding: 50px;
-  background-color: #8c00ff;
+  background-color: #00000077;
 }
 
 .se-alert {
@@ -336,20 +442,51 @@ p {
   width: 370px;
 }
 
-/* Main container */
+/* Main container for Projects*/
 .container3 {
+  height: 95vh;
+  font-size: 12px;
+}
+
+.left4 {
+  width: 40%;
+}
+
+.right4 {
+  width: 50%;
+}
+
+/* Main container for Certificates*/
+.container4 {
+  height: 100vh;
   background-image: linear-gradient(#4200dc, #a600fe);
-  color: white;
+}
+
+.left5 {
+  margin-left: 10px;
+  width: 50%;
+}
+
+.right5 {
+  margin-right: -50px;
+  width: 50%;
 }
 
 .carousel-control-prev-icon,
 .carousel-control-next-icon {
-  background-color: #dbdbdb;
+  background-color: #00000074;
 }
 
-.r-top,
-.r-bottom {
-  height: 45%;
+.left6 {
+  width: 48%;
+}
+
+.right6 {
+  width: 48%;
+}
+
+.gal-work {
+  color: white;
 }
 
 /* Footer */
@@ -387,32 +524,10 @@ footer {
   line-height: 35px;
 }
 
-/* Project container / Certificate containers*/
-.container4 {
-  height: 95vh;
-  background-color: #ffffff;
-}
-
-.left4 {
-  width: 35%;
-}
-
-.right4 {
-  width: 55%;
-}
-
-.left5 {
-  width: 47%;
-}
-
-.right5 {
-  width: 47%;
-}
-
-.b-color {
-  background-image: linear-gradient(#ffffff, #ffffff);
-}
-
 .row-height {
   height: 50px;
+}
+
+.bg-color {
+  background-image: linear-gradient(#efefef, #efefef);
 }
